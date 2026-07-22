@@ -1,0 +1,33 @@
+class Book {
+    String title;
+    String author;
+    String publisher;
+    int year; 
+    Book(String title, String author, String publisher, int year) {
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.year = year;
+    }
+    void display() {
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Publisher: " + publisher);
+        System.out.println("Year: " + year);
+        System.out.println();
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Book[] books = new Book[3];
+        Book b1 = new Book("Java", "Jayasri", "sri", 2018);
+         books[0] = b1;
+        Book b2 = new Book("Code", "sri", "logesh", 2008);
+        books[1] = b2;
+        Book b3 = new Book("python", "jaisii", "maha", 1988);
+         books[2] = b3;
+        for (int i = 0; i < books.length; i++) {
+            books[i].display();
+        }
+    }
+}
