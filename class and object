@@ -1,0 +1,48 @@
+class Student {
+    int rollno;
+    String name;
+    String dept;
+    String section;
+    int year;
+
+    // Constructor
+    Student(int rollno, String name, String dept, String section, int year) {
+        this.rollno = rollno;
+        this.name = name;
+        this.dept = dept;
+        this.section = section;
+        this.year = year;
+    }
+
+    // Method to display student details
+    void display() {
+        System.out.println("rollno: " + rollno);
+        System.out.println("name: " + name);
+        System.out.println("dept: " + dept);
+        System.out.println("section: " + section);
+        System.out.println("year: " + year);
+        System.out.println();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an array of Student objects
+        Student[] students = new Student[3];
+
+        // Instantiate individual student objects
+        Student s1 = new Student(101, "Alice", "CSE", "A", 2);
+        Student s2 = new Student(102, "Bob", "ECE", "B", 3);
+        Student s3 = new Student(103, "Charlie", "IT", "A", 4);
+
+        // Assign objects to the array
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+        // Loop through the array and display details
+        for (int i = 0; i < students.length; i++) {
+            students[i].display();
+        }
+    }
+}
